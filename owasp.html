@@ -454,7 +454,7 @@
         var adjust = parseFloat(document.getElementById('adjust').value);
         var impact = ( busiimpact * adjust ) + ( techimpact * (1-adjust) )
         function score2text(score){
-          return ['OBSERVATION','LOW','RATHER LOW','MEDIUM','RATHER HIGH','HIGH'][score];
+          return ['LOW','RATHER LOW','MEDIUM','RATHER HIGH','HIGH'][score];
         }
         var score = val2score(likelihood) + val2score(impact);
         var elm = document.getElementById('risk');
