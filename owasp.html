@@ -696,8 +696,8 @@
                 selects.length
             ) / 10.0;
           var elm = document.getElementById(name);
-          //elm.textContent = value.toFixed(1);
-          elm.textContent = ktbval2score(value);
+          elm.textContent = value.toFixed(1);
+          //elm.textContent = ktbval2score(value);
           elm.style.backgroundColor = colors[val2score(value)];
           elm.nextSibling.style.backgroundColor = colors[val2score(value)];
           elm.nextSibling.textContent = value2text(value);
