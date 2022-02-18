@@ -638,7 +638,6 @@
         }
         //var score = val2score(likelihood) + val2score(impact);
         var score = ktbval2score(likelihood) * ktbval2score(impact);
-        console.log(score);
         var elm = document.getElementById("risk");
         //elm.textContent = score2text(score);
         elm.textContent = finalRisk(score);
