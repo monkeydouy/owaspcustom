@@ -496,10 +496,10 @@
           return ['LOW','RATHER LOW','MEDIUM','RATHER HIGH','HIGH'][score];
         }
         //var score = val2score(likelihood) + val2score(impact);
-        var score = ktbval2score(likelihood) * ktbval2score(impact);
+        var score = likelihood * impact;
         var elm = document.getElementById('risk');
         //elm.textContent = score2text(score);
-        elm.textContent = finalRisk(score);
+        elm.textContent = finalRisk(score) + " ( " + score + " ) " + likelihood + " * " + impact;
         //elm.style.backgroundColor = scoreColors[score];
         elm.style.backgroundColor = finalColor(score);
       }
@@ -531,15 +531,16 @@
       sections.map(
         function(name){
           var updateFunc = function(){
-            this.parentNode.style.backgroundColor = colors[ val2score(this.value) ];
+            this.parentNode.style.backgroundColor = scoreColors[ ktbval2score(this.value)-1 ];
             var selects = document.querySelectorAll("#tr_" + name + " select");
             var value = Math.round(Array.prototype.reduce.call( selects, function(sum,elm){
               return sum + parseInt(elm.value);
             },0) * 10 / selects.length) / 10.0;
             var elm = document.getElementById(name);
-            elm.textContent = value.toFixed(1);
-            elm.style.backgroundColor = colors[ val2score(value) ];
-            elm.nextSibling.style.backgroundColor = colors[ val2score(value) ];
+            //elm.textContent = value.toFixed(1);
+            elm.textContent = ktbval2score(value)
+            elm.style.backgroundColor = scoreColors[ ktbval2score(value) -1 ];
+            elm.nextSibling.style.backgroundColor = scoreColors[ ktbval2score(value) -1 ];
             elm.nextSibling.textContent = value2text(value);
             globalUpdate();
             var status = getStatus();
