@@ -1,128 +1,152 @@
 <!-- access this at: https://tinyurl.com/owasp-calculator -->
-<html><head>
+<html>
+  <head>
     <style>
-    @import url('https://fonts.googleapis.com/css?family=Palanquin:400,700&display=swap');
-    html {
+      @import url("https://fonts.googleapis.com/css?family=Palanquin:400,700&display=swap");
+      html {
         font-size: 16px !important;
-    }
-    body {
-      background-color: #000;
-      background-image: url(https://www.securenetwork.it/assets/images/bg-black.png);
-      background-repeat: repeat;
-      color: #fff;
-      font-family: 'Palanquin', sans-serif;
-      width: 100%;
-    }
-    #main{
-      width: 1200px;
-      margin: 20px auto;
-    }
-    table {
-      width: 98%;
-      font-size: small;
-      text-align: center;
-    }
-    h3,h4 {
-      text-align: center;
-      margin: 5px auto;
-    }
-    tr {
-    }
-    th, td {
-      border: 2px solid #aaa;
-      border-right: 0;
-    }
-    td {
-      border-top: 0;
-      background-color: #fff;
-      font-size: 1rem;
-    }
-    th:last-child, td:last-child {
-      border-right: 2px solid #aaa;
-    }
-    h2,h3 {
-      color: #f80;
-    }
-    table,tr,td,th {
-      border-spacing: 0;
-      margin:0;
-      padding:0;
-    }
-    th {
-      font-size: 0.75rem;
-      height: 2.4rem;
-      background-color: #048;
-    }
-    td {
-      color: #000;
-    }
-    table tr:first-child th:first-child {
+      }
+      body {
+        background-color: #000;
+        background-image: url(https://www.securenetwork.it/assets/images/bg-black.png);
+        background-repeat: repeat;
+        color: #fff;
+        font-family: "Palanquin", sans-serif;
+        width: 100%;
+      }
+      #main {
+        width: 1200px;
+        margin: 20px auto;
+      }
+      table {
+        width: 98%;
+        font-size: small;
+        text-align: center;
+      }
+      h3,
+      h4 {
+        text-align: center;
+        margin: 5px auto;
+      }
+      tr {
+      }
+      th,
+      td {
+        border: 2px solid #aaa;
+        border-right: 0;
+      }
+      td {
+        border-top: 0;
+        background-color: #fff;
+        font-size: 1rem;
+      }
+      th:last-child,
+      td:last-child {
+        border-right: 2px solid #aaa;
+      }
+      h2,
+      h3 {
+        color: #f80;
+      }
+      table,
+      tr,
+      td,
+      th {
+        border-spacing: 0;
+        margin: 0;
+        padding: 0;
+      }
+      th {
+        font-size: 0.75rem;
+        height: 2.4rem;
+        background-color: #048;
+      }
+      td {
+        color: #000;
+      }
+      table tr:first-child th:first-child {
         border-top-left-radius: 10px;
-    }
-    table tr:first-child th:last-child {
+      }
+      table tr:first-child th:last-child {
         border-top-right-radius: 10px;
-    }
-    table tr:last-child td:first-child {
+      }
+      table tr:last-child td:first-child {
         border-bottom-left-radius: 10px;
-    }
-    table tr:last-child td:last-child {
+      }
+      table tr:last-child td:last-child {
         border-bottom-right-radius: 10px;
-    }
-    input[type=range] {
-      width: 100px;
-      height: 0.8rem;
-    }
-    a {
-      color: #99f;
-    }
-    div.section{
-      width: 50%;
-      float: left;
-    }
-    .section th, .section td, .section select {
-      width: 140px;
-      font-family: 'Palanquin', sans-serif;
-    }
-    .section select {
-      background-color: transparent;
-    }
-    .section td {
-      height: 2rem;
-      font-size: 0.8rem;
-    }
-    #likelihood,#techimpact,#busiimpact {
-      border-right: none;
-      /*font-family: sans-serif;*/
-      /*font-size: 1em;*/
-    }
-    #likelihood+td,#techimpact+td,#busiimpact+td {
-      border-left: none;
-    }
-    #vector {
-      width: 27rem;
-      font-size: 0.8rem;
-      text-align: center;
-      user-select: all;
-      background: #aaa;
-      margin: 5px 20px;
-      /*margin-right: 20px;*/
-      padding: 5px 10px;
-      color: #222;
-    }
-    #footer{
-      text-align: right;
-    }
-    
+      }
+      input[type="range"] {
+        width: 100px;
+        height: 0.8rem;
+      }
+      a {
+        color: #99f;
+      }
+      div.section {
+        width: 50%;
+        float: left;
+      }
+      .section th,
+      .section td,
+      .section select {
+        width: 140px;
+        font-family: "Palanquin", sans-serif;
+      }
+      .section select {
+        background-color: transparent;
+      }
+      .section td {
+        height: 2rem;
+        font-size: 0.8rem;
+      }
+      #likelihood,
+      #techimpact,
+      #busiimpact {
+        border-right: none;
+        /*font-family: sans-serif;*/
+        /*font-size: 1em;*/
+      }
+      #likelihood + td,
+      #techimpact + td,
+      #busiimpact + td {
+        border-left: none;
+      }
+      #vector {
+        width: 27rem;
+        font-size: 0.8rem;
+        text-align: center;
+        user-select: all;
+        background: #aaa;
+        margin: 5px 20px;
+        /*margin-right: 20px;*/
+        padding: 5px 10px;
+        color: #222;
+      }
+      #footer {
+        text-align: right;
+      }
     </style>
-    </head><body>
-    <div id=main>
+  </head>
+  <body>
+    <div id="main">
       <h2>OWASP Risk Rating Calculator</h2>
-      <em>Based on the <a href='https://www.owasp.org/images/5/5b/OWASP_Risk_Rating_Template_Example.xlsx'>official Excel version</a> and the <a href='https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology'>wiki article</a>.</em> You can get here simply visiting <em>tinyurl.com/owasp-calculator</em> that's easy to remember!
-      <h3>
-        Likelihood
-      </h3>
-      <div class=mainrow id=tr_likelihood>
-        <div class=section>
+      <em
+        >Based on the
+        <a
+          href="https://www.owasp.org/images/5/5b/OWASP_Risk_Rating_Template_Example.xlsx"
+          >official Excel version</a
+        >
+        and the
+        <a href="https://wiki.owasp.org/index.php/OWASP_Risk_Rating_Methodology"
+          >wiki article</a
+        >.</em
+      >
+      You can get here simply visiting
+      <em>tinyurl.com/owasp-calculator</em> that's easy to remember!
+      <h3>Likelihood</h3>
+      <div class="mainrow" id="tr_likelihood">
+        <div class="section">
           <h4>Threat Agent Factors</h4>
           <table>
             <tr>
@@ -130,59 +154,82 @@
               <th>Motive</th>
               <th>Opportunity</th>
               <th>Size</th>
-            </tr><tr>
-              <td><select title='How technically skilled would you consider the expected group of threat agents?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - No technical skills</option>
-                <option value='2'>2</option>
-                <option value='3'>3 - Some technical skills</option>
-                <option value='4'>4</option>
-                <option value='5'>5 - Advanced computer user</option>
-                <option value='6'>6 - Network and programming skills</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Security penetration skills</option>
-              </select></td>
-              <td><select title='How motivated is this group of threat agents to find and exploit this vulnerability?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Low or no reward</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4 - Possible reward</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - High reward</option>
-              </select></td>
-              <td><select title='What resources and opportunities are required for this group of threat agents to find and exploit this vulnerability?'>
-                <option value='0' selected>0 - Full access or expensive resources required</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4 - Special access or resources required</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7 - Some access or resources required</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - No access or resources required</option>
-              </select></td>
-              <td><select title='How large is this group of threat agents?'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2' selected>2 - Developers, system administrators</option>
-                <option value='3'>3</option>
-                <option value='4'>4 - Intranet users</option>
-                <option value='5'>5 -Partners</option>
-                <option value='6'>6 - Authenticated users</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Anonymous Internet users</option>
-              </select></td>
+            </tr>
+            <tr>
+              <td>
+                <select
+                  title="How technically skilled would you consider the expected group of threat agents?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>1 - No technical skills</option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Some technical skills</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Advanced computer user</option>
+                  <option value="6">6 - Network and programming skills</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Security penetration skills</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="How motivated is this group of threat agents to find and exploit this vulnerability?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>1 - Low or no reward</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4 - Possible reward</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - High reward</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="What resources and opportunities are required for this group of threat agents to find and exploit this vulnerability?"
+                >
+                  <option value="0" selected>
+                    0 - Full access or expensive resources required
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">
+                    4 - Special access or resources required
+                  </option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">
+                    7 - Some access or resources required
+                  </option>
+                  <option value="8">8</option>
+                  <option value="9">9 - No access or resources required</option>
+                </select>
+              </td>
+              <td>
+                <select title="How large is this group of threat agents?">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2" selected>
+                    2 - Developers, system administrators
+                  </option>
+                  <option value="3">3</option>
+                  <option value="4">4 - Intranet users</option>
+                  <option value="5">5 -Partners</option>
+                  <option value="6">6 - Authenticated users</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Anonymous Internet users</option>
+                </select>
+              </td>
             </tr>
           </table>
         </div>
-        <div class=section>
+        <div class="section">
           <h4>Vulnerability Factors</h4>
           <table>
             <tr>
@@ -190,65 +237,80 @@
               <th>Ease of Exploit</th>
               <th>Awareness</th>
               <th>Intrusion Detection</th>
-            </tr><tr>
-              <td><select title='How easy is it for this group of threat agents to discover this vulnerability?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Practically impossible</option>
-                <option value='2'>2</option>
-                <option value='3'>3 - Difficult</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7 - Easy</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Automated tools available</option>
-              </select></td>
-              <td><select title='How easy is it for this group of threat agents to actually exploit this vulnerability?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Theoretical</option>
-                <option value='2'>2</option>
-                <option value='3'>3 - Difficult</option>
-                <option value='4'>4</option>
-                <option value='5'>5 - Easy</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Automated tools available</option>
-              </select></td>
-              <td><select title='How well known is this vulnerability to this group of threat agents?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Unknown</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4 - Hidden</option>
-                <option value='5'>5</option>
-                <option value='6'>6 - Obvious</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Public knowledge</option>
-              </select></td>
-              <td><select title='How likely is an exploit to be detected?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Active detection in application</option>
-                <option value='2'>2</option>
-                <option value='3'>3 - Logged and reviewed</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8 - Logged without review</option>
-                <option value='9'>9 - Not logged</option>
-              </select></td>
+            </tr>
+            <tr>
+              <td>
+                <select
+                  title="How easy is it for this group of threat agents to discover this vulnerability?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>1 - Practically impossible</option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Difficult</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7 - Easy</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Automated tools available</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="How easy is it for this group of threat agents to actually exploit this vulnerability?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>1 - Theoretical</option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Difficult</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Easy</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Automated tools available</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="How well known is this vulnerability to this group of threat agents?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>1 - Unknown</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4 - Hidden</option>
+                  <option value="5">5</option>
+                  <option value="6">6 - Obvious</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Public knowledge</option>
+                </select>
+              </td>
+              <td>
+                <select title="How likely is an exploit to be detected?">
+                  <option value="0">0</option>
+                  <option value="1" selected>
+                    1 - Active detection in application
+                  </option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Logged and reviewed</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8 - Logged without review</option>
+                  <option value="9">9 - Not logged</option>
+                </select>
+              </td>
             </tr>
           </table>
         </div>
       </div>
-      <div style="clear:both">&nbsp;</div>
-      <h3>
-        Impact
-      </h3>
-      <div class=mainrow>
-        <div class=section>
+      <div style="clear: both">&nbsp;</div>
+      <h3>Impact</h3>
+      <div class="mainrow">
+        <div class="section">
           <h4>Technical Impact</h4>
           <table>
             <tr>
@@ -256,59 +318,92 @@
               <th>Loss of Integrity</th>
               <th>Loss of Availability</th>
               <th>Loss of Accountability</th>
-            </tr><tr id=tr_techimpact>
-              <td><select title='How much data could be disclosed and how sensitive is it?'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2' selected>2 - Minimal non-sensitive data disclosed</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6 - Minimal critical data disclosed, extensive non-sensitive data disclosed</option>
-                <option value='7'>7 - Extensive critical data disclosed</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - All data disclosed</option>
-              </select></td>
-              <td><select title='How much data could be corrupted and how damaged is it?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Minimal slightly corrupt data</option>
-                <option value='2'>2</option>
-                <option value='3'>3 - Minimal seriously corrupt data</option>
-                <option value='4'>4</option>
-                <option value='5'>5 - Extensive slightly corrupt data</option>
-                <option value='6'>6</option>
-                <option value='7'>7- Extensive seriously corrupt data</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - All data totally corrupt</option>
-              </select></td>
-              <td><select title='How much service could be lost and how vital is it?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Minimal secondary services interrupted</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5 - Minimal primary services interrupted, extensive secondary services interrupted</option>
-                <option value='6'>6</option>
-                <option value='7'>7 - Extensive primary services interrupted</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - All services completely lost</option>
-              </select></td>
-              <td><select title='Are the threat agents&apos; actions traceable to an individual?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Fully traceable</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7 - Possibly traceable</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Completely anonymous</option>
-              </select></td>
+            </tr>
+            <tr id="tr_techimpact">
+              <td>
+                <select
+                  title="How much data could be disclosed and how sensitive is it?"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2" selected>
+                    2 - Minimal non-sensitive data disclosed
+                  </option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">
+                    6 - Minimal critical data disclosed, extensive non-sensitive
+                    data disclosed
+                  </option>
+                  <option value="7">
+                    7 - Extensive critical data disclosed
+                  </option>
+                  <option value="8">8</option>
+                  <option value="9">9 - All data disclosed</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="How much data could be corrupted and how damaged is it?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>
+                    1 - Minimal slightly corrupt data
+                  </option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Minimal seriously corrupt data</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Extensive slightly corrupt data</option>
+                  <option value="6">6</option>
+                  <option value="7">7- Extensive seriously corrupt data</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - All data totally corrupt</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="How much service could be lost and how vital is it?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>
+                    1 - Minimal secondary services interrupted
+                  </option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">
+                    5 - Minimal primary services interrupted, extensive
+                    secondary services interrupted
+                  </option>
+                  <option value="6">6</option>
+                  <option value="7">
+                    7 - Extensive primary services interrupted
+                  </option>
+                  <option value="8">8</option>
+                  <option value="9">9 - All services completely lost</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="Are the threat agents' actions traceable to an individual?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>1 - Fully traceable</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7 - Possibly traceable</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Completely anonymous</option>
+                </select>
+              </td>
             </tr>
           </table>
         </div>
-        <div class=section>
+        <div class="section">
           <h4>Business Impact</h4>
           <table>
             <tr>
@@ -316,112 +411,152 @@
               <th>Reputation Damage</th>
               <th>Non-Compliance</th>
               <th>Privacy Violation</th>
-            </tr><tr id=tr_busiimpact>
-              <td><select title='How much financial damage will result from an exploit?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Less than the cost to fix the vulnerability</option>
-                <option value='2'>2</option>
-                <option value='3'>3 - Minor effect on annual profit</option>
-                <option value='4'>4</option>
-                <option value='5'>5</option>
-                <option value='6'>6</option>
-                <option value='7'>7 - Significant effect on annual profit</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Bankruptcy</option>
-              </select></td>
-              <td><select title='Would an exploit result in reputation damage that would harm the business?'>
-                <option value='0'>0</option>
-                <option value='1' selected>1 - Minimal damage</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-                <option value='4'>4 - Loss of major accounts</option>
-                <option value='5'>5 - Loss of goodwill</option>
-                <option value='6'>6</option>
-                <option value='7'>7</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Brand damage</option>
-              </select></td>
-              <td><select title='How much exposure does non-compliance introduce?'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2' selected>2 - Minor violation</option>
-                <option value='3'>3</option>
-                <option value='4'>4</option>
-                <option value='5'>5 - Clear violation</option>
-                <option value='6'>6</option>
-                <option value='7'>7 - High profile violation</option>
-                <option value='8'>8</option>
-                <option value='9'>9</option>
-              </select></td>
-              <td><select title='How much personally identifiable information could be disclosed?'>
-                <option value='0'>0</option>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3' selected>3 - One individual</option>
-                <option value='4'>4</option>
-                <option value='5'>5 - Hundreds of people</option>
-                <option value='6'>6</option>
-                <option value='7'>7 - Thousands of people</option>
-                <option value='8'>8</option>
-                <option value='9'>9 - Millions of people</option>
-              </select></td>
+            </tr>
+            <tr id="tr_busiimpact">
+              <td>
+                <select
+                  title="How much financial damage will result from an exploit?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>
+                    1 - Less than the cost to fix the vulnerability
+                  </option>
+                  <option value="2">2</option>
+                  <option value="3">3 - Minor effect on annual profit</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">
+                    7 - Significant effect on annual profit
+                  </option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Bankruptcy</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="Would an exploit result in reputation damage that would harm the business?"
+                >
+                  <option value="0">0</option>
+                  <option value="1" selected>1 - Minimal damage</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4 - Loss of major accounts</option>
+                  <option value="5">5 - Loss of goodwill</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Brand damage</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="How much exposure does non-compliance introduce?"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2" selected>2 - Minor violation</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Clear violation</option>
+                  <option value="6">6</option>
+                  <option value="7">7 - High profile violation</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </td>
+              <td>
+                <select
+                  title="How much personally identifiable information could be disclosed?"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3 - One individual</option>
+                  <option value="4">4</option>
+                  <option value="5">5 - Hundreds of people</option>
+                  <option value="6">6</option>
+                  <option value="7">7 - Thousands of people</option>
+                  <option value="8">8</option>
+                  <option value="9">9 - Millions of people</option>
+                </select>
+              </td>
             </tr>
           </table>
         </div>
       </div>
-      <div style="clear:both">&nbsp;</div>
+      <div style="clear: both">&nbsp;</div>
       <h3>Scores</h3>
-      <div class=mainrow>
-        <div class=section>
+      <div class="mainrow">
+        <div class="section">
           <h4>Intermediate</h4>
-          <table id=scores>
+          <table id="scores">
             <tr>
-              <th colspan=2>Overall Likelihood</th>
-              <th colspan=2>Overall Technical Impact</th>
-              <th colspan=2>Overall Business Impact</th>
-            </tr><tr>
-              <td id=likelihood>1</td><td>LOW</td>
-              <td id=techimpact>1.25</td><td>LOW</td>
-              <td id=busiimpact>1.75</td><td>LOW</td>
+              <th colspan="2">Overall Likelihood</th>
+              <th colspan="2">Overall Technical Impact</th>
+              <th colspan="2">Overall Business Impact</th>
+            </tr>
+            <tr>
+              <td id="likelihood">1</td>
+              <td>LOW</td>
+              <td id="techimpact">1.25</td>
+              <td>LOW</td>
+              <td id="busiimpact">1.75</td>
+              <td>LOW</td>
             </tr>
           </table>
         </div>
-        <div class=section>
+        <div class="section">
           <h4>Final Score</h4>
-          <table id=finalscore>
+          <table id="finalscore">
             <tr>
               <th>Adjust score</th>
               <th>Risk</th>
-            </tr><tr>
+            </tr>
+            <tr>
               <td>
-                Technical
-                &nbsp;&nbsp;
-                <input id="adjust" type="range" min="0" max="1" value="0.5" title="0.5" step="0.05" />
-                &nbsp;&nbsp;
-                Business
+                Technical &nbsp;&nbsp;
+                <input
+                  id="adjust"
+                  type="range"
+                  min="0"
+                  max="1"
+                  value="0.5"
+                  title="0.5"
+                  step="0.05"
+                />
+                &nbsp;&nbsp; Business
               </td>
-              <td id=risk>NOTE</td>
+              <td id="risk">NOTE</td>
             </tr>
           </table>
         </div>
       </div>
-      <div style="clear:both">&nbsp;</div>
-      <div id='footer'>
-        <img style='float:left' src='https://www.securenetwork.it/assets/images/sn-logo.png' height=30/>
-        <pre style='float:right' id='vector' title="K sKill Level&#x0a;M Motive&#x0a;O Opportunity&#x0a;Z siZe&#x0a;D ease of Discovery&#x0a;X ease of eXploit&#x0a;W aWareness&#x0a;L intrusion detection (Logging)&#x0a;C loss of Confidentiality&#x0a;I loss of Integrity&#x0a;A loss of Availability&#x0a;T loss of accountability (Trackability)&#x0a;F Financial damage&#x0a;R Reputation damage&#x0a;S non-compliance (Standards)&#x0a;P Privacy violation&#x0a;"></pre>
+      <div style="clear: both">&nbsp;</div>
+      <div id="footer">
+        <img
+          style="float: left"
+          src="https://www.securenetwork.it/assets/images/sn-logo.png"
+          height="30"
+        />
+        <pre
+          style="float: right"
+          id="vector"
+          title="K sKill Level&#x0a;M Motive&#x0a;O Opportunity&#x0a;Z siZe&#x0a;D ease of Discovery&#x0a;X ease of eXploit&#x0a;W aWareness&#x0a;L intrusion detection (Logging)&#x0a;C loss of Confidentiality&#x0a;I loss of Integrity&#x0a;A loss of Availability&#x0a;T loss of accountability (Trackability)&#x0a;F Financial damage&#x0a;R Reputation damage&#x0a;S non-compliance (Standards)&#x0a;P Privacy violation&#x0a;"
+        ></pre>
         Vector:
       </div>
     </div>
     <script type="text/javascript">
-      function adjustScore(elm){
+      function adjustScore(elm) {
         elm.title = elm.value;
         globalUpdate();
         window.location.hash = getStatus();
       }
       document.getElementById("adjust").onchange = adjustScore;
-      var colors = ['#8e8','#ee6','#f66']
-      var scoreColors = ['#009933','#66ff33','#ffff66','#ff9900','#ff0000']
-      function value2text(value){
+      var colors = ["#8e8", "#ee6", "#f66"];
+      var scoreColors = ["#009933", "#66ff33", "#ffff66", "#ff9900", "#ff0000"];
+      function value2text(value) {
         if (value < 2) {
           return "Low";
         } else if (value >= 2 && value < 4) {
@@ -434,7 +569,7 @@
           return "High";
         }
       }
-      function val2score(value){
+      function val2score(value) {
         if (value < 2) {
           return 0;
         } else if (value >= 2 && value < 4) {
@@ -447,7 +582,7 @@
           return 4;
         }
       }
-      function ktbval2score(value){
+      function ktbval2score(value) {
         if (value < 2) {
           return 1;
         } else if (value >= 2 && value < 4) {
@@ -460,7 +595,7 @@
           return 5;
         }
       }
-      function finalRisk(value){
+      function finalRisk(value) {
         if (value <= 2) {
           return "Low";
         } else if (value >= 3 && value <= 4) {
@@ -473,7 +608,7 @@
           return "High";
         }
       }
-      function finalColor(value){
+      function finalColor(value) {
         if (value <= 2) {
           return "#009933";
         } else if (value >= 3 && value <= 4) {
@@ -481,96 +616,121 @@
         } else if (value >= 5 && value <= 9) {
           return "#ffff66";
         } else if (value >= 10 && value <= 15) {
-          return "#ff9900"
+          return "#ff9900";
         } else if (value >= 15) {
           return "#ff0000";
         }
       }
-      function globalUpdate(){
-        var likelihood = parseFloat(document.getElementById('likelihood').textContent);
-        var techimpact = parseFloat(document.getElementById('techimpact').textContent);
-        var busiimpact = parseFloat(document.getElementById('busiimpact').textContent);
-        var adjust = parseFloat(document.getElementById('adjust').value);
-        var impact = ( busiimpact * adjust ) + ( techimpact * (1-adjust) )
-        function score2text(score){
-          return ['LOW','RATHER LOW','MEDIUM','RATHER HIGH','HIGH'][score];
+      function globalUpdate() {
+        var likelihood = parseFloat(
+          document.getElementById("likelihood").textContent
+        );
+        var techimpact = parseFloat(
+          document.getElementById("techimpact").textContent
+        );
+        var busiimpact = parseFloat(
+          document.getElementById("busiimpact").textContent
+        );
+        var adjust = parseFloat(document.getElementById("adjust").value);
+        var impact = busiimpact * adjust + techimpact * (1 - adjust);
+        function score2text(score) {
+          return ["LOW", "RATHER LOW", "MEDIUM", "RATHER HIGH", "HIGH"][score];
         }
         //var score = val2score(likelihood) + val2score(impact);
         var score = ktbval2score(likelihood) * ktbval2score(impact);
-        var elm = document.getElementById('risk');
+        alert(score);
+        var elm = document.getElementById("risk");
         //elm.textContent = score2text(score);
         elm.textContent = finalRisk(score);
         //elm.style.backgroundColor = scoreColors[score];
         elm.style.backgroundColor = finalColor(score);
       }
-      function getStatus(){
+      function getStatus() {
         var selects = document.querySelectorAll("select");
         var letters = "KMOZDXWLCIATFRSP";
-        var vector = Array.prototype.map.call(selects,function(x,i){return letters[i]+x.value});
-        vector = Array.prototype.reduce.call(vector,function(v,x,i){return v + (i%4==0 ? "/" : ":") + x});
+        var vector = Array.prototype.map.call(selects, function (x, i) {
+          return letters[i] + x.value;
+        });
+        vector = Array.prototype.reduce.call(vector, function (v, x, i) {
+          return v + (i % 4 == 0 ? "/" : ":") + x;
+        });
         // vector = vector,replace(/\//g)
-        var percent = parseInt(100*parseFloat(document.getElementById('adjust').value));
-        return "OWASP/"+vector+"/"+percent;
-      }  
-      function clamp(num,min,max){
+        var percent = parseInt(
+          100 * parseFloat(document.getElementById("adjust").value)
+        );
+        return "OWASP/" + vector + "/" + percent;
+      }
+      function clamp(num, min, max) {
         return Math.min(Math.max(num, min), max);
       }
-      function setStatus(status){
-        var status = (status.match(/\d+/g) || []).map(function (x){return parseInt(x)});
-        status = status.map(function(x,i){return clamp(x, 0, i<16 ? 9 : 100)})
-        if(status.length != 17)
-          status = [1,1,0,2,1,1,1,1,2,1,1,1,1,1,2,3,50];
-        document.getElementById('adjust').value = status.pop() / 100.0;
+      function setStatus(status) {
+        var status = (status.match(/\d+/g) || []).map(function (x) {
+          return parseInt(x);
+        });
+        status = status.map(function (x, i) {
+          return clamp(x, 0, i < 16 ? 9 : 100);
+        });
+        if (status.length != 17)
+          status = [1, 1, 0, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 3, 50];
+        document.getElementById("adjust").value = status.pop() / 100.0;
         var selects = document.querySelectorAll("select");
-        Array.prototype.map.call( selects, function(elm,index){
+        Array.prototype.map.call(selects, function (elm, index) {
           elm.value = status[index];
           elm.onchange();
         });
       }
-      var sections = ["likelihood",'techimpact','busiimpact'];
-      sections.map(
-        function(name){
-          var updateFunc = function(){
-            this.parentNode.style.backgroundColor = colors[ val2score(this.value) ];
-            var selects = document.querySelectorAll("#tr_" + name + " select");
-            var value = Math.round(Array.prototype.reduce.call( selects, function(sum,elm){
-              return sum + parseInt(elm.value);
-            },0) * 10 / selects.length) / 10.0;
-            var elm = document.getElementById(name);
-            //elm.textContent = value.toFixed(1);
-            elm.textContent = ktbval2score(value.toFixed(1));
-            elm.style.backgroundColor = colors[ val2score(value) ];
-            elm.nextSibling.style.backgroundColor = colors[ val2score(value) ];
-            elm.nextSibling.textContent = value2text(value);
-            globalUpdate();
-            var status = getStatus();
-            document.getElementById('vector').textContent = status;
-            window.location.hash = status;
-          };
-          var selects = document.querySelectorAll("#tr_"+name+" select");
-          Array.prototype.map.call( selects, function(elm){
-            elm.onchange = updateFunc;
-          });
-        }
-      );
+      var sections = ["likelihood", "techimpact", "busiimpact"];
+      sections.map(function (name) {
+        var updateFunc = function () {
+          this.parentNode.style.backgroundColor = colors[val2score(this.value)];
+          var selects = document.querySelectorAll("#tr_" + name + " select");
+          var value =
+            Math.round(
+              (Array.prototype.reduce.call(
+                selects,
+                function (sum, elm) {
+                  return sum + parseInt(elm.value);
+                },
+                0
+              ) *
+                10) /
+                selects.length
+            ) / 10.0;
+          var elm = document.getElementById(name);
+          //elm.textContent = value.toFixed(1);
+          elm.textContent = ktbval2score(value.toFixed(1));
+          elm.style.backgroundColor = colors[val2score(value)];
+          elm.nextSibling.style.backgroundColor = colors[val2score(value)];
+          elm.nextSibling.textContent = value2text(value);
+          globalUpdate();
+          var status = getStatus();
+          document.getElementById("vector").textContent = status;
+          window.location.hash = status;
+        };
+        var selects = document.querySelectorAll("#tr_" + name + " select");
+        Array.prototype.map.call(selects, function (elm) {
+          elm.onchange = updateFunc;
+        });
+      });
       setStatus(window.location.hash);
-      window.onhashchange = function(){setStatus(window.location.hash)};
-      window.onload = function(){
+      window.onhashchange = function () {
+        setStatus(window.location.hash);
+      };
+      window.onload = function () {
         var selects = document.querySelectorAll("select");
-        Array.prototype.map.call(selects, function(x){
+        Array.prototype.map.call(selects, function (x) {
           var td = x.parentNode;
           var tr = td.parentNode;
-          var i = Array.prototype.indexOf.call(tr.children,td);
+          var i = Array.prototype.indexOf.call(tr.children, td);
           var th = tr.previousElementSibling.children[i];
           th.title = x.title;
         });
-      }
-      document.getElementById('vector').onpaste = function(ev){
-          var vector = ev.clipboardData.getData('text')
-          setStatus(vector);
-          return ev.preventDefault();
-      }
-      
+      };
+      document.getElementById("vector").onpaste = function (ev) {
+        var vector = ev.clipboardData.getData("text");
+        setStatus(vector);
+        return ev.preventDefault();
+      };
     </script>
-    </body>
-    </html>
+  </body>
+</html>
