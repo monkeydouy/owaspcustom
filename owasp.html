@@ -537,7 +537,8 @@
               return sum + parseInt(elm.value);
             },0) * 10 / selects.length) / 10.0;
             var elm = document.getElementById(name);
-            elm.textContent = "value.toFixed(1);"
+            //elm.textContent = value.toFixed(1);
+            elm.textContent = ktbval2score(value.toFixed(1));
             elm.style.backgroundColor = colors[ val2score(value) ];
             elm.nextSibling.style.backgroundColor = colors[ val2score(value) ];
             elm.nextSibling.textContent = value2text(value);
