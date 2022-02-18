@@ -447,6 +447,32 @@
           return 4;
         }
       }
+      function finalRisk(value){
+        if (value <= 2) {
+          return "Low";
+        } else if (value >= 3 && value <= 4) {
+          return "Rather Low";
+        } else if (value >= 5 && value <= 9) {
+          return "Medium";
+        } else if (value >= 10 && value <= 15) {
+          return "Rather High";
+        } else if (value >= 15) {
+          return "High";
+        }
+      }
+      function finalColor(value){
+        if (value <= 2) {
+          return "Low";
+        } else if (value >= 3 && value <= 4) {
+          return "Rather Low";
+        } else if (value >= 5 && value <= 9) {
+          return "Medium";
+        } else if (value >= 10 && value <= 15) {
+          return "Rather High";
+        } else if (value >= 15) {
+          return "High";
+        }
+      }
       function globalUpdate(){
         var likelihood = parseFloat(document.getElementById('likelihood').textContent);
         var techimpact = parseFloat(document.getElementById('techimpact').textContent);
@@ -456,10 +482,13 @@
         function score2text(score){
           return ['LOW','RATHER LOW','MEDIUM','RATHER HIGH','HIGH'][score];
         }
-        var score = val2score(likelihood) + val2score(impact);
+        //var score = val2score(likelihood) + val2score(impact);
+        var score = val2score(likelihood) * val2score(impact);
         var elm = document.getElementById('risk');
-        elm.textContent = score2text(score);
-        elm.style.backgroundColor = scoreColors[score];
+        //elm.textContent = score2text(score);
+        elm.textContent = finalRisk(score);
+        //elm.style.backgroundColor = scoreColors[score];
+        elm.style.backgroundColor = finalColor[score];
       }
       function getStatus(){
         var selects = document.querySelectorAll("select");
